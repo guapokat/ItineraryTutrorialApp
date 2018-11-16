@@ -10,6 +10,8 @@
 		612B82DD219E63A70099E09B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B82DC219E63A70099E09B /* AppDelegate.swift */; };
 		612B82E4219E63A90099E09B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 612B82E3219E63A90099E09B /* Assets.xcassets */; };
 		612B82E7219E63A90099E09B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612B82E5219E63A90099E09B /* LaunchScreen.storyboard */; };
+		612B82F1219E82730099E09B /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B82F0219E82730099E09B /* TripModel.swift */; };
+		612B82F3219E827E0099E09B /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B82F2219E827E0099E09B /* TripFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		612B82E3219E63A90099E09B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		612B82E6219E63A90099E09B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		612B82E8219E63A90099E09B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		612B82F0219E82730099E09B /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		612B82F2219E827E0099E09B /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +54,30 @@
 		612B82DB219E63A70099E09B /* Itinerary */ = {
 			isa = PBXGroup;
 			children = (
+				612B82EE219E824E0099E09B /* Model */,
 				612B82DC219E63A70099E09B /* AppDelegate.swift */,
 				612B82E3219E63A90099E09B /* Assets.xcassets */,
 				612B82E5219E63A90099E09B /* LaunchScreen.storyboard */,
 				612B82E8219E63A90099E09B /* Info.plist */,
 			);
 			path = Itinerary;
+			sourceTree = "<group>";
+		};
+		612B82EE219E824E0099E09B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				612B82EF219E825B0099E09B /* Trip */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		612B82EF219E825B0099E09B /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				612B82F0219E82730099E09B /* TripModel.swift */,
+				612B82F2219E827E0099E09B /* TripFunctions.swift */,
+			);
+			path = Trip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612B82F1219E82730099E09B /* TripModel.swift in Sources */,
 				612B82DD219E63A70099E09B /* AppDelegate.swift in Sources */,
+				612B82F3219E827E0099E09B /* TripFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
