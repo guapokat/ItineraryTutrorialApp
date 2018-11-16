@@ -14,12 +14,20 @@ class TripFunctions {
         
     }
     
-    static func readTrips() {
-        //if there are no trip models
-        if Data.tripModels.count == 0 {
-            Data.tripModels.append(TripModel(title: "Trip to Bali!"))
-            Data.tripModels.append(TripModel(title: "Mexico"))
-            Data.tripModels.append(TripModel(title: "Russian Trip"))
+    static func readTrips(completion: @escaping () -> ()) {
+        //operate on background thread
+        DispatchQueue.global(qos: .userInteractive).async {
+            //async code won't wait and userInteractive = highest priority
+            //if there are no trip models
+            if Data.tripModels.count == 0 {
+                Data.tripModels.append(TripModel(title: "Trip to Bali!"))
+                Data.tripModels.append(TripModel(title: "Mexico"))
+                Data.tripModels.append(TripModel(title: "Russian Trip"))
+            }
+        }
+        
+        DispatchQueue.main.async {
+            completion()
         }
     }
     
