@@ -9,11 +9,11 @@
 import Foundation
 
 class TripModel {
-    var id: String!
-    var title: String! //Exclamation = is required
+    let id: UUID
+    var title: String
     
     init(title: String) {
-        id = UUID().uuidString //auto generates a unique ID!!!! that's awesome
+        id = UUID() //auto generates a unique ID!!!! that's awesome
         self.title = title
     }
 }
